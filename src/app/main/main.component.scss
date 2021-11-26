@@ -1,0 +1,36 @@
+section {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+}
+
+.title {
+    color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.email-list {
+    border-radius: 2px;
+}
+.order-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    label {
+        cursor: pointer;
+        &.selected {
+            font-weight: 600;
+            &::after { 
+                content: "▼";
+            }
+            &.is-ascending {
+                &::after { 
+                    content: "▲";
+                }
+            }
+        }
+
+        &.date {
+            width: 88px;
+        }
+    }
+}

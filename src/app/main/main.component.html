@@ -1,0 +1,15 @@
+<section>
+    <div class="title">
+        <h2>Joe's Email Inbox</h2>
+    </div>
+    
+    <div class="order-buttons">
+        <label class="sender"  [ngClass]="{'selected': currentOrder == 1, 'is-ascending': isAscending}" (click)="reOrder('sender')">Sender</label>
+        <label class="date" [ngClass]="{'selected': currentOrder == 0, 'is-ascending': isAscending}" (click)="reOrder('date')">Date</label>
+    </div>
+    <div class="email-list">
+        <div class="item" *ngFor="let item of emailsArray">
+            <app-items [email]="item"></app-items>
+        </div>
+    </div>
+</section>

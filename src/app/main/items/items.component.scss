@@ -1,0 +1,42 @@
+.email-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e4e4e4;
+    &:hover {
+        position: relative;
+        box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0,0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15);
+    }
+    background-color: rgba(242,245,245,0.8);
+
+    &.unread {
+        background-color: #ffffff;
+    }
+    
+    .main-line {
+        display: flex;
+        justify-content: space-between;
+
+
+        .from {
+            width: 200px;
+        }
+        .subject {
+            width: 100%;
+        }
+        .date {
+            width: 120px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .subject, .date {
+                display: none;
+            }
+        }
+    }
+
+    .message {
+        font-size: 14px;
+        color: rgba(black, .6);
+    }
+}

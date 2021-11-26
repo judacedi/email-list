@@ -1,0 +1,10 @@
+<div class="email-container" [ngClass]="{'unread': email.unread}" (click)="turnToRead()">
+    <div class="main-line">
+        <div class="from">{{email.from}}</div>
+        <div class="subject">{{email.subject}}</div>
+        <div class="date">{{email.datetime | date}}</div>
+    </div>
+    <div class="message-line" >
+        <div class="message">{{email.message != '' ? email.message : 'This message is empty'}}</div>
+    </div>
+</div>
